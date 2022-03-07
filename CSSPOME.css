@@ -1,0 +1,76 @@
+
+html, body {
+ margin: 0;		/* MARGE */
+ padding: 0;	/* REMPLISAGE */
+ }
+body {
+ background-color: #5F5F5F; /* COULEUR DE FOND */
+ font-family: Verdana, sans-serif; /* POLICE */
+ font-size: 100%; /* TAILLE */
+ }
+h1 {
+ font-size: 150%; /* TAILLE TEXTE */
+ color: white; 	  /* COULEUR TEXTE */
+ text-align: center;	/* ALIGNEMENT DU TEXTE */
+ background-color: orangered;
+ font-family: 'The Urban Way'sans-serif; /* POLICE */
+ }
+h2 {
+ font-size: 150%; 	/* TAILLE TEXTE */
+ color: #eee; 		/* COULEUR TEXTE */
+ padding-left: 15px;	/* REMPLISAGE */
+ text-align:;	/* ALIGNEMENT DU TEXTE */
+ }
+
+h3 {
+ font-size: 150%; /* TAILLE TEXTE */
+ color: white; 	  /* COULEUR TEXTE */
+ text-align: ;	/* ALIGNEMENT DU TEXTE */
+ background-color:;
+ font-family: 'The Urban Way'sans-serif; /* POLICE */
+ }
+h4 {
+ font-size: 150%; /* TAILLE TEXTE */
+ color: white; 	  /* COULEUR TEXTE */
+ text-align: ;	/* ALIGNEMENT DU TEXTE */
+ background-color:;
+ font-family: 'The Urban Way'sans-serif; /* POLICE */
+ }
+
+
+/* MENU DEROULANT */
+
+
+#menuderoulant {
+  padding:0;  /* REMPLISAGE */
+  margin:0;	  /* MARGE */
+  text-align: center; /* ALIGNEMENT DU TEXTE */
+}
+#menuderoulant ul {
+  padding:0;	/* REMPLISAGE */
+  margin:0;		/* MARGE */
+  text-align: center;	/* ALIGNEMENT DU TEXTE */
+}
+#menuderoulant li {
+   background-color:darkblue; /* COULEUR DE FOND */
+}
+#menuderoulant li li {
+   max-height:0;
+   overflow: hidden;
+   transition: all .5s; /* TRANSITION */
+   background: #444; /* COULEUR DU FOND */
+}
+#menuderoulant a {
+  display:block; /* AFFICHE L'ELEMENT EN DESSOUS DE L'AUTRE */
+  color: yellow; /* COULEUR DE  */
+  padding: 8px 0; /* REMPLISAGE */
+  font-family: verdana; /* STYLE DE POLICE */
+  font-size:120% /* TAILLE DU TEXTE */
+}
+
+#menuderoulant li:hover {
+   background-color: darkblue /* COULEUR DE FOND */
+}
+#menuderoulant li:hover li {
+  max-height: 100%;
+}

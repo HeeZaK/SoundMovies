@@ -1,0 +1,36 @@
+tes2
+coucou
+coucou
+Tu vois ce que j'écris ? bien sur !
+
+Super ça mgl
+Ca c'est cool. bien sur c cool
+Ptdrrr
+
+slt les bros
+salut le S 
+Breeeeeeeeeeeeeeeeeeeeeeeeeeeef
+
+
+du  coup je dois aller sur quels fichiers pour coder la page ? 
+très très très très très bonne question
+En fait, y'a les fichiers dans le dashprject/dashfront/src/app c'est les différents components. Faut qu'on en rajoute pour prendre tous les components dont on a besoin.
+Après tu sais faut les modifier pour prendre les parties dans le body du bootstrap de base 
+
+
+okay et si je code dans le index direct du html c good ?  ou pas ? 
+
+Att je réflechis
+Alors, je crois que c'est bon oui, mais faut quand même répartir les différentes parties dans des components pour que ce soit plus lisible.
+
+okay bah faut je regarde comment faire des components c en Js ? 
+
+Non c'est en html. En fait quand tu créer un component 
+
+att je t voc snap flm de t'expliquer comme ça
+
+okay dacc 
+
+
+
+

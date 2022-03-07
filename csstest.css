@@ -1,0 +1,28 @@
+html, body {
+ margin: 0;
+ padding: 0;
+ }
+body {
+ background-color: white; 
+ font-family: Verdana, sans-serif; 
+ font-size: 100%;
+ }
+h1 {
+ font-size: 200%; 
+ color: navy; 
+ text-align: center;
+ }
+h2 {
+ font-size: 150%; 
+ color: red; 
+ padding-left: 15px;
+ }
+p {
+    width: 350px; /* On a indiqué une largeur (obligatoire) */
+    margin: auto; /* On peut donc demander à ce que le bloc soit centré avec auto */
+    border: 1px solid black;
+    text-align: justify;
+    padding: 12px;
+    margin-bottom: 20px;
+}
+
