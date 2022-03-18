@@ -14,9 +14,7 @@ export class AppComponent implements OnInit {
   
   ngOnInit() {
       this.service.getPosts()
-        .subscribe(response => {
-          console.log(response);
-          
+        .subscribe(response => {       
           this.posts = response;
         });
   }
