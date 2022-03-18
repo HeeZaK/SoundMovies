@@ -1,6 +1,6 @@
 <div class="row mt-5 mb-2">
     <div class="input-group">
-        <input class="form-control" id="movie" type="text" placeholder="Cherche ton film ;)" aria-label="Cherche ton film ;)" data-sb-validations="required,email" />
+        <input class="form-control" id="movie" type="text" (change)="onChangeEvent($event)" placeholder="Cherche ton film ;)" aria-label="Cherche ton film ;)" data-sb-validations="required,email" />
         <div class="input-group-append">
             <button class="btn btn-primary" id="submitButton" type="submit">
                 Recherche
