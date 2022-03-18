@@ -7,7 +7,7 @@ import { BackgroundComponent } from './components/background/background.componen
 import { SynopsisComponent } from './components/synopsis/synopsis.component';
 import { SpotifyComponent } from './components/spotify/spotify.component';
 import { TitreComponent } from './components/titre/titre.component';
-import { SocialIconComponent } from './social-icon/social-icon.component';
+import { SocialIconComponent } from './components/social-icon/social-icon.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
