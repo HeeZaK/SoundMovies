@@ -7,6 +7,7 @@ import { SearchBarMovieComponent } from './components/search-bar-movie/search-ba
 import { BackgroundComponent } from './components/background/background.component';
 import { SynopsisComponent } from './components/synopsis/synopsis.component';
 import { TitreComponent } from './components/titre/titre.component';
+import { SocialIconComponent } from './social-icon/social-icon.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { TitreComponent } from './components/titre/titre.component';
     BackgroundComponent,
     SynopsisComponent,
     TitreComponent,
+    SocialIconComponent,
   ],
   imports: [
     BrowserModule,
