@@ -6,13 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-bar-movie.component.css']
 })
 export class SearchBarMovieComponent {
-  name = '';
+  recherche = '';
   
   
   constructor() { }
 
   onChangeEvent(event: any){
     console.log(event.target.value);
+    this.recherche = event.target.value
   }
 
 }
