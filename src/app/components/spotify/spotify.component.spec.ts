@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SearchBarMovieComponent } from './search-bar-movie.component';
+import { SpotifyComponent } from './spotify.component';
 
-describe('SearchBarMovieComponent', () => {
-  let component: SearchBarMovieComponent;
-  let fixture: ComponentFixture<SearchBarMovieComponent>;
+describe('SpotifyComponent', () => {
+  let component: SpotifyComponent;
+  let fixture: ComponentFixture<SpotifyComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SearchBarMovieComponent ]
+      declarations: [ SpotifyComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SearchBarMovieComponent);
+    fixture = TestBed.createComponent(SpotifyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,4 +1,10 @@
-<div class="row input-group-newsletter">
-    <div class="col"><input class="form-control" id="movie" type="movie" placeholder="Cherche ton film ;)" aria-label="Cherche ton film ;)" data-sb-validations="required,email" /></div>
-    <div class="col-auto"><button class="btn btn-primary disabled" id="submitButton" type="submit">Recherche</button></div>
+<div class="row mt-5 mb-2">
+    <div class="input-group">
+        <input class="form-control" id="movie" type="text" (change)="onChangeEvent($event)" placeholder="Cherche ton film ;)" aria-label="Cherche ton film ;)" data-sb-validations="required,email" />
+        <div class="input-group-append">
+            <button class="btn btn-primary" id="submitButton" type="submit">
+                Recherche
+            </button>
+        </div>
+    </div>
 </div>

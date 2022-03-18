@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SearchBarMovieComponent } from './search-bar-movie.component';
+import { SocialIconComponent } from './social-icon.component';
 
-describe('SearchBarMovieComponent', () => {
-  let component: SearchBarMovieComponent;
-  let fixture: ComponentFixture<SearchBarMovieComponent>;
+describe('SocialIconComponent', () => {
+  let component: SocialIconComponent;
+  let fixture: ComponentFixture<SocialIconComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SearchBarMovieComponent ]
+      declarations: [ SocialIconComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SearchBarMovieComponent);
+    fixture = TestBed.createComponent(SocialIconComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

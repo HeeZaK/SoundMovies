@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class BackgroundComponent implements OnInit {
 
   constructor() {
+
+   }
+
+  ngOnInit(): void {
+
     var request = new XMLHttpRequest();
 
     var API_KEY = '3b021ae1d32cf743a19a4701eb265f50';
@@ -22,10 +27,6 @@ export class BackgroundComponent implements OnInit {
       }
     }
     
-
-   }
-
-  ngOnInit(): void {
   }
 
 }
