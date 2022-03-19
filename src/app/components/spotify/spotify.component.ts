@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./spotify.component.css']
 })
 export class SpotifyComponent implements OnInit {
+  token = ""
+  isConnected = false
 
   constructor() { }
 
@@ -50,16 +52,17 @@ export class SpotifyComponent implements OnInit {
 
   //   let redirect_uri = 'https%3A%2F%2Fsoundmovies.go.yo.fr%2F';
   //   const redirect = '';
-  //   if(accessToken == null || accessToken == "" || accessToken == undefined) 
+  //   if(accessToken == null || accessToken == "" || accessToken == undefined) {
   //     window.location.replace(redirect);
+  //   } else {
+  //     /* On stock dans la variable d'instance du composant accueil le Token
+  //     de connexion */
+  //     this.token = accessToken.toString();
+  //     /*On est maintenant connecte à Spotify (on peut donc afficher la page Spotify)*/
+  //     this.isConnected = true;
+  //     console.log("Le token d'accès est : " + this.token);
+  //   }
   
-  //   /* On stock dans la variable d'instance du composant accueil le Token
-  //   de connexion */
-  //   this.token = accessToken.toString();
-  //   /*On est maintenant connecte à Spotify (on peut donc afficher la page Spotify)*/
-  //   this.isConnected = true;
-  //   console.log("Le token d'accès est : " + this.token);
- }
-  
+  }
 }
 

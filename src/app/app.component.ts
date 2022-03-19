@@ -1,4 +1,4 @@
-import { Component, OnInit  } from '@angular/core';
+import { Component  } from '@angular/core';
 import { PostService } from './services/post.service';
 
 @Component({
@@ -7,16 +7,23 @@ import { PostService } from './services/post.service';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements OnInit {
-  posts:any;
+export class AppComponent {
+  resultAPI:any;
+  researchWord: string;
+  items = ['item1', 'item2', 'item3', 'item4'];
+
   
-  constructor(private service:PostService) {}
-  
-  ngOnInit() {
-      this.service.getPosts()
-        .subscribe(response => {       
-          this.posts = response;
-        });
+  constructor(private service:PostService) {
+    this.researchWord = ""
   }
 
+  getDataFromAPI(newItem: string) {
+    this.researchWord = newItem
+    if (!(newItem === '')) {
+      this.service.getPosts(newItem)
+        .subscribe(response => {       
+          this.resultAPI = response;
+        });
+    }
+  }
 }
