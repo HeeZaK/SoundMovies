@@ -17,10 +17,13 @@ export class AppComponent {
   }
 
   getDataFromAPI(newItem: string) {
+    console.log("bonjour");
     this.researchWord = newItem
     if (!(newItem === '')) {
       this.service.getPosts(newItem)
-        .subscribe(response => {       
+        .subscribe(response => {     
+          console.log(response); 
+          let tempo = response; 
           this.resultAPI = response;
         });
     }

@@ -3,39 +3,25 @@
     
     <!-- Background Video -->
     <!-- <app-background></app-background> -->
-    <div *ngIf="resultAPI?.length > 0">
-        <p *ngFor="let bite of resultAPI">{{bite.nom}} - {{bite.codesPostaux[0]}}<p>
-    </div>
+    <!-- <div *ngIf="resultAPI?.results.length > 0">
+       
+    </div> -->
+    <!-- <div *ngIf="resultAPI?.hasOwnProperty('results')">
+            <img
+                 src="https://image.tmdb.org/t/p/w500{{resultAPI.results[0].poster_path}}"
+            >
+            {{resultAPI.results[0].overview}}
+    </div> -->
     <!-- Masthead-->
     <app-titre></app-titre>
     <app-search-bar-movie (handlerSetResearchWord)="getDataFromAPI($event)"></app-search-bar-movie>
-    <span>Recherche actuel : {{ researchWord }}</span>
-    <app-synopsis></app-synopsis>
+    <app-background [item]="resultAPI?.results[0]"> </app-background>
+    <!-- <span>Recherche actuel : {{ researchWord }}</span> -->
+    <app-synopsis [item]="resultAPI?.results[0]"> </app-synopsis>
     <app-spotify></app-spotify>
 
     <!-- Social -->
     <app-social-icon></app-social-icon>
 
-    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-        <!-- Email address input-->
-        
-        <!-- Submit success message-->
-        <!---->
-        <!-- This is what your users will see when the form-->
-        <!-- has successfully submitted-->
-        <div class="d-none" id="submitSuccessMessage">
-            <div class="text-center mb-3 mt-2">
-                <div class="fw-bolder">Form submission successful!</div>
-                To activate this form, sign up at
-                <br />
-                <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-            </div>
-        </div>
-        <!-- Submit error message-->
-        <!---->
-        <!-- This is what your users will see when there is-->
-        <!-- an error submitting the form-->
-        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3 mt-2">Error sending message!</div></div>
-    </form>
 
 </div>
