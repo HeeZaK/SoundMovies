@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-search-bar-movie',
@@ -7,14 +7,12 @@ import { Component } from '@angular/core';
 })
 export class SearchBarMovieComponent {
   recherche = '';
-  
+  @Output() handlerSetResearchWord = new EventEmitter<string>();
   
   constructor() { }
 
-  onChangeEvent(event: any){
-    console.log(event.target.value);
-    this.recherche = event.target.value
+  handleclick(value: string) {
+    this.handlerSetResearchWord.emit(value);
   }
 
 }
-

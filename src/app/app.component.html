@@ -2,14 +2,14 @@
 
     
     <!-- Background Video -->
-    <app-background></app-background>
-    <div *ngIf="posts?.length > 0">
-        <p>Meilleur ville over all : {{posts[0].nom}}</p>
-        <p>code postal : {{posts[0].code}}</p>
-    </div>
+    <!-- <app-background></app-background> -->
+    <ul *ngIf="resultAPI?.length > 0">
+        <li *ngFor="let item of resultAPI">{{item.nom}} - {{item.codesPostaux[0]}}</li>
+    </ul>
     <!-- Masthead-->
     <app-titre></app-titre>
-    <app-search-bar-movie></app-search-bar-movie>
+    <app-search-bar-movie (handlerSetResearchWord)="getDataFromAPI($event)"></app-search-bar-movie>
+    <span>Recherche actuel : {{ researchWord }}</span>
     <app-synopsis></app-synopsis>
     <app-spotify></app-spotify>
 
