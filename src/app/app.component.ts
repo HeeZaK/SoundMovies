@@ -10,7 +10,6 @@ import { PostService } from './services/post.service';
 export class AppComponent {
   resultAPI:any;
   researchWord: string;
-  items = ['item1', 'item2', 'item3', 'item4'];
 
   
   constructor(private service:PostService) {
