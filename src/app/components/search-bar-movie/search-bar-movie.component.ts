@@ -12,6 +12,8 @@ export class SearchBarMovieComponent {
   constructor() { }
 
   handleclick(value: string) {
+    console.log("salut");
+    
     this.handlerSetResearchWord.emit(value);
   }
 

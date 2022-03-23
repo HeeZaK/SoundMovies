@@ -1,3 +1,21 @@
 <div class="row">
-    <p>Ici se trouvera le synopsis</p>
+    <div *ngIf="item?.hasOwnProperty('original_title')">
+        <p style = 'color: white;
+                    font-size: 40px;
+                    font-weight: bold;
+                    margin-left: 10%;
+            '>
+        {{item.original_title}}</p>
+    </div>
+    <div *ngIf="item?.hasOwnProperty('overview')">
+        <p style = "font-size: 30px;
+                    color: white;
+                    text-align: left;
+                    text-align-last: left ;
+                    margin-right: 60%;
+                    line-height: 1.5;
+        
+        ">
+    {{item.overview}}</p>
+    </div>
 </div>
