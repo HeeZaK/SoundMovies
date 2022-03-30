@@ -1,21 +1,18 @@
 <div class="row">
-    <div *ngIf="item?.hasOwnProperty('original_title')">
-        <p style = 'color: white;
-                    font-size: 40px;
-                    font-weight: bold;
-                    margin-left: 10%;
-            '>
-        {{item.original_title}}</p>
+
+    <div *ngIf="item?.hasOwnProperty('poster_path')" class="col-12 col-md-4">
+        <img class="" src="https://image.tmdb.org/t/p/w500{{item.poster_path}}" /> 
     </div>
-    <div *ngIf="item?.hasOwnProperty('overview')">
-        <p style = "font-size: 30px;
-                    color: white;
-                    text-align: left;
-                    text-align-last: left ;
-                    margin-right: 60%;
-                    line-height: 1.5;
-        
-        ">
-    {{item.overview}}</p>
+
+    <div class="col-12 col-md-8 d-flex align-items-center">
+        <div class="row p-3">
+            <h2 class="col-12" *ngIf="item?.hasOwnProperty('original_title')">
+                {{item.original_title}}
+            </h2>
+            <p *ngIf="item?.hasOwnProperty('overview')" class="col-12">
+                {{item.overview}}
+            </p>
+        </div>
     </div>
+
 </div>

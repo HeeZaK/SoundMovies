@@ -1,6 +1,7 @@
 import { Component  } from '@angular/core';
 import { PostService } from './services/post.service';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,23 +9,25 @@ import { PostService } from './services/post.service';
 })
 
 export class AppComponent {
-  resultAPI:any;
-  researchWord: string;
+  resultAPI: any;
+  resultSpotify: any;
 
   
   constructor(private service:PostService) {
-    this.researchWord = ""
   }
 
-  getDataFromAPI(newItem: string) {
-    console.log("bonjour");
-    this.researchWord = newItem
-    if (!(newItem === '')) {
-      this.service.getPosts(newItem)
+  getDataFromAPI(formQuery: any) {
+    if (!(formQuery.tokenUserSpotify === '') && !(formQuery.recherche === '')) {
+      this.service.getPosts(formQuery.recherche)
         .subscribe(response => {     
           console.log(response); 
-          let tempo = response; 
           this.resultAPI = response;
+
+          this.service.searchSpotify(this.resultAPI.results[0].original_title, formQuery.tokenUserSpotify)
+            .subscribe(res => {
+              console.log(res);
+              this.resultSpotify = res;
+            });
         });
     }
   }

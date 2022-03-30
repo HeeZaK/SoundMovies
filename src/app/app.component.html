@@ -12,10 +12,10 @@
     <!-- Masthead-->
     <app-titre></app-titre>
     <app-search-bar-movie (handlerSetResearchWord)="getDataFromAPI($event)"></app-search-bar-movie>
-    <app-background [item]="resultAPI?.results[0]"> </app-background>
-    <!-- <span>Recherche actuel : {{ researchWord }}</span> -->
-    <app-synopsis [item]="resultAPI?.results[0]"> </app-synopsis>
-    <app-spotify></app-spotify>
+    <hr class="my-5" />
+    <app-synopsis *ngIf="resultAPI?.results[0]" [item]="resultAPI?.results[0]"> </app-synopsis>
+    <hr class="my-5" />
+    <app-spotify *ngIf="resultSpotify?.tracks.items" [musiques]="resultSpotify?.tracks.items"></app-spotify>
 
     <!-- Social -->
     <app-social-icon></app-social-icon>
