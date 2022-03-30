@@ -12,32 +12,10 @@
     <!-- Masthead-->
     <app-titre></app-titre>
     <app-search-bar-movie (handlerSetResearchWord)="getDataFromAPI($event)"></app-search-bar-movie>
-    <app-background [item]="resultAPI?.results[0]"> </app-background>
-    <!-- <span>Recherche actuel : {{ researchWord }}</span> -->
-    <app-synopsis [item]="resultAPI?.results[0]"> </app-synopsis>
-    <app-spotify></app-spotify>
-
-
-
-    <button (click)="spotifySearch()" class="btn btn-primary" id="submitButton" type="submit">
-        search spoti
-    </button>
-
-    <div class="row">
-        <div *ngFor="let item of resultSpotify?.tracks.items; let i = index" class="col-sm-6 text-primary" style="width: 18rem;">
-            <div class="card">
-                <img class="card-img-top" src="{{item.album.images[0].url}}" alt="{{item.album.name}}" />
-                <div class="card-body">
-                    <h5 class="card-title">{{item.name}}</h5>
-                    <audio controls src="{{item.preview_url}}" class="w-100"></audio>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
+    <hr class="my-5" />
+    <app-synopsis *ngIf="resultAPI?.results[0]" [item]="resultAPI?.results[0]"> </app-synopsis>
+    <hr class="my-5" />
+    <app-spotify *ngIf="resultSpotify?.tracks.items" [musiques]="resultSpotify?.tracks.items"></app-spotify>
 
     <!-- Social -->
     <app-social-icon></app-social-icon>

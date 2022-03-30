@@ -1,4 +1,11 @@
-<!--Boutton de connexion à Spotify -->
-<button class="btn-default animation-on-hover" type="button" style = 'margin-left: 90%; bottom: 60px ; left: 300px' (click)="loginSpotify();">
-    Connexion à Spotify
-</button>
+<div class="row">
+    <div *ngFor="let item of musiques; let i = index" class="col-12 col-sm-2 text-black mt-3">
+        <div class="card">
+            <img class="card-img-top" src="{{item.album.images[0].url}}" alt="{{item.album.name}}" />
+            <div class="card-body">
+                <h5 class="card-title">{{item.name}}</h5>
+                <audio controls src="{{item.preview_url}}" class="w-100"></audio>
+            </div>
+        </div>
+    </div>
+</div>

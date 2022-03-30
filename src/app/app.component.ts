@@ -11,32 +11,23 @@ import { PostService } from './services/post.service';
 export class AppComponent {
   resultAPI: any;
   resultSpotify: any;
-  researchWord: string;
 
   
   constructor(private service:PostService) {
-    this.researchWord = ""
   }
 
-  getDataFromAPI(newItem: string) {
-    console.log("bonjour");
-    this.researchWord = newItem
-    if (!(newItem === '')) {
-      this.service.getPosts(newItem)
+  getDataFromAPI(formQuery: any) {
+    if (!(formQuery.tokenUserSpotify === '') && !(formQuery.recherche === '')) {
+      this.service.getPosts(formQuery.recherche)
         .subscribe(response => {     
           console.log(response); 
           this.resultAPI = response;
-        });
-    }
-  }
 
-  spotifySearch() {
-    console.log(this.researchWord);
-    if (!(this.researchWord === '')) {
-      this.service.searchSpotify(this.researchWord)
-        .subscribe(response => {     
-          console.log(response); 
-          this.resultSpotify = response;
+          this.service.searchSpotify(this.resultAPI.results[0].original_title, formQuery.tokenUserSpotify)
+            .subscribe(res => {
+              console.log(res);
+              this.resultSpotify = res;
+            });
         });
     }
   }
