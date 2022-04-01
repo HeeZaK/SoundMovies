@@ -1,17 +1,12 @@
 <div class="container text-light">
-
-    <!-- <div *ngIf="resultAPI?.results.length > 0">
-       
-    </div> -->
-    <!-- <div *ngIf="resultAPI?.hasOwnProperty('results')">
-            <img
-                 src="https://image.tmdb.org/t/p/w500{{resultAPI.results[0].poster_path}}"
-            >
-            {{resultAPI.results[0].overview}}
-    </div> -->
     <!-- Masthead-->
     <app-titre></app-titre>
-    <app-search-bar-movie (handlerSetResearchWord)="getDataFromAPI($event)"></app-search-bar-movie>
+    <app-search-bar-movie *ngIf="accessToken; else spotiLogin" (handlerSetResearchWord)="getDataFromAPI($event)"></app-search-bar-movie>
+    <ng-template #spotiLogin>
+        <div class="row mt-5 mb-2">
+            <a class="btn btn-success w-100" href="http://soundmovies.eu-4.evennode.com/login" role="button">Connexion Spotify</a>
+        </div>
+    </ng-template>
     <hr class="my-5" />
     <app-synopsis *ngIf="resultAPI?.results[0]" [item]="resultAPI?.results[0]"> </app-synopsis>
     <hr class="my-5" />
