@@ -1,9 +1,8 @@
 <div class="row mt-5 mb-2">
     <div class="input-group">
         <input class="form-control" #rechercheValue id="movie" type="text" placeholder="Cherche ton film ;)" aria-label="Cherche ton film ;)" />
-        <input class="form-control" #OAuthToken type="text" placeholder="Token OAuth" aria-label="Token OAuth" />
         <div class="input-group-append">
-            <button (click)="handleclick(rechercheValue.value, OAuthToken.value)" class="btn btn-primary" id="submitButton" type="submit">
+            <button (click)="handleclick(rechercheValue.value)" class="btn btn-primary" id="submitButton" type="submit">
                 Recherche
             </button>
         </div>

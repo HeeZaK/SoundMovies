@@ -6,14 +6,12 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./search-bar-movie.component.css']
 })
 export class SearchBarMovieComponent {
-  @Output() handlerSetResearchWord = new EventEmitter<{recherche:string,tokenUserSpotify:string}>();
+  @Output() handlerSetResearchWord = new EventEmitter<string>();
   
   constructor() { }
 
-  handleclick(rechercheValue: string, tokenValue: string) {
-    console.log("salut");
-    
-    this.handlerSetResearchWord.emit({recherche:rechercheValue, tokenUserSpotify:tokenValue});
+  handleclick(rechercheValue: string) {
+    this.handlerSetResearchWord.emit(rechercheValue);
   }
 
 }
