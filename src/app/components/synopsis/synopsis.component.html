@@ -1,14 +1,16 @@
 <div class="row">
-
+    <!-- Ici on place le poster du film recherché que l'on récuperé de l'api movie data base -->
     <div *ngIf="item?.hasOwnProperty('poster_path')" class="col-12 col-md-4 d-flex justify-content-center">
         <img class="" src="https://image.tmdb.org/t/p/w500{{item.poster_path}}" /> 
     </div>
 
     <div class="col-12 col-md-8 d-flex align-items-center">
         <div class="row p-3">
+            <!-- Ici on met le titre original récuperé de l'api movie data base -->
             <h2 class="col-12" *ngIf="item?.hasOwnProperty('original_title')">
                 {{item.original_title}}
             </h2>
+            <!-- Ici on met le synopsis récuperé de l'api movie data base -->
             <p *ngIf="item?.hasOwnProperty('overview')" class="col-12">
                 {{item.overview}}
             </p>

@@ -1,15 +1,31 @@
 <div class="container text-light">
     <!-- Masthead-->
+
     <app-titre></app-titre>
+    <!-- 
+        Si on a un code spotify, alors recherche avalable
+    -->
+    <!-- 
+        Sinon boutton connexion spotify avec redirection 
+    -->
     <app-search-bar-movie *ngIf="accessToken; else spotiLogin" (handlerSetResearchWord)="getDataFromAPI($event)"></app-search-bar-movie>
     <ng-template #spotiLogin>
         <div class="row mt-5 mb-2">
+            <!-- 
+                page avec le bouton pour se connecter à spotify
+            -->
             <a class="btn btn-success w-100" href="http://soundmovies.eu-4.evennode.com/login" role="button">Connexion Spotify</a>
         </div>
     </ng-template>
     <hr class="my-5" />
+    <!-- 
+        Si les données d'un films sont récupéré, alors on affiche le component synopsis
+    -->
     <app-synopsis *ngIf="resultAPI?.results[0]" [item]="resultAPI?.results[0]"> </app-synopsis>
     <hr class="my-5" />
+    <!-- 
+        Si les données d'un films sont récupéré, alors on affiche le component spotify
+    -->
     <app-spotify *ngIf="resultSpotify?.tracks.items" [musiques]="resultSpotify?.tracks.items"></app-spotify>
 
     <!-- Social -->

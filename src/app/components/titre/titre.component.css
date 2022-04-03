@@ -1,3 +1,7 @@
+/*Ici on donne le type de police et la police du titre */
 h1 {
     font-style: italic;
+    font-family: "Open Sans";
+    src: url("/fonts/OpenSans-Orange-Juice.tff") format("truetype");
+           
 }

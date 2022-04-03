@@ -10,6 +10,7 @@ export class SearchBarMovieComponent {
   
   constructor() { }
 
+  //On va récuperer le contenu de la search bar et l'envoyer à la fonction parent
   handleclick(rechercheValue: string) {
     this.handlerSetResearchWord.emit(rechercheValue);
   }

@@ -1,7 +1,9 @@
 <div class="row mt-5 mb-2">
     <div class="input-group">
-        <input class="form-control" #rechercheValue id="movie" type="text" placeholder="Cherche ton film ;)" aria-label="Cherche ton film ;)" />
+        <!-- Ici nous avons une barre de recherche où l'utilisateur va rentrer le nom du film et ce sera la variable que nous allons récuperer pour nos APIs-->
+        <input class="form-control" #rechercheValue id="movie" type="text" placeholder="Cherche ton film ;)" aria-label="Cherche ton film ;)" /> 
         <div class="input-group-append">
+            <!-- Quand il y a un clique sur le bouton Rechercher nous récuperons la valeur qu'il y aura dans la search bar -->
             <button (click)="handleclick(rechercheValue.value)" class="btn btn-primary" id="submitButton" type="submit">
                 Recherche
             </button>
