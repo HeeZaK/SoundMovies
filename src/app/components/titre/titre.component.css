@@ -1,7 +1,12 @@
 /*Ici on donne le type de police et la police du titre */
-h1 {
-    font-style: italic;
-    font-family: "Open Sans";
-    src: url("/fonts/OpenSans-Orange-Juice.tff") format("truetype");
-           
+.titre {
+    font-size: 7rem;
+    color: #0A55B5;
+    font-family: "Titre";
+}
+
+.sousTitre{
+    font-size: 2rem;
+    color: #0A55B5;
+    font-family: "Titre";
 }

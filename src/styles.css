@@ -4,3 +4,12 @@ Couleur du fond du site
 body {
     background: rgb(15, 14, 26)!important;
 }
+
+/*
+Police du titre
+*/
+@font-face {
+    font-family: "Titre";
+    src: local("Titre"), url("./assets/fonts/orange-juice-2.0.ttf") format("truetype");    
+}
+
